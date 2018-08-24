@@ -58,6 +58,13 @@
 
                     <ul class="nav navbar-nav">
                         <li>
+                            @if ( App::isLocale('pt-br') )
+                                <a href="{{ route('admin.locale',['locale' => 'en']) }}">English Version</a>
+                            @else
+                                <a href="{{ route('admin.locale',['locale' => 'pt-br']) }}">Versão em Português</a>
+                            @endif
+                        </li>
+                        <li>
                             @if(config('adminlte.logout_method') == 'GET' || !config('adminlte.logout_method') && version_compare(\Illuminate\Foundation\Application::VERSION, '5.3.0', '<'))
                                 <a href="{{ url(config('adminlte.logout_url', 'auth/logout')) }}">
                                     <i class="fa fa-fw fa-power-off"></i> {{ trans('adminlte::adminlte.log_out') }}

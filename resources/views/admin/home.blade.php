@@ -7,5 +7,5 @@
 @stop
 
 @section('content')
-    <p>You are logged in!</p>
+    <p>@lang('message.Hello'), {{ Auth::user()->name }}</p>
 @stop

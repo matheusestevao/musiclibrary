@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 2',
+    'title' => 'Music Library',
 
     'title_prefix' => '',
 
@@ -30,9 +30,9 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => 'Music Library',
 
-    'logo_mini' => '<b>A</b>LT',
+    'logo_mini' => 'M Library',
 
     /*
     |--------------------------------------------------------------------------
@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'skin' => 'blue',
+    'skin' => 'green',
 
     /*
     |--------------------------------------------------------------------------
@@ -85,7 +85,7 @@ return [
     |
     */
 
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'admin/dashboard',
 
     'logout_url' => 'logout',
 
@@ -110,79 +110,60 @@ return [
     'menu' => [
         'MAIN NAVIGATION',
         [
-            'text' => 'Blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
+            'text' => 'Dashboard',
+            'url'  => 'admin/dashboard',
+            'icon' => 'dashboard',
         ],
         [
-            'text'        => 'Pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'file',
-            'label'       => 4,
-            'label_color' => 'success',
+            'text' => 'Users',
+            'url'  => 'admin/users',
+            'icon' => 'users',
+            'can'  => 'menu',
         ],
-        'ACCOUNT SETTINGS',
+        [
+            'text' => 'Band/Artist',
+            'url'  => 'admin/band_artists',
+            'icon' => 'music',
+        ],
+        /*[
+            'text' => 'Album',
+            'url'  => 'admin/album',
+            'icon' => 'music',
+        ],
+
+        [
+            'header' => 'CONFIGURATION',
+            'can'    => 'menu'
+        ],
+        [
+            'text'  => 'Genre',
+            'icon'  => 'list',
+            'can'   => 'menu',
+        ],
         [
             'text' => 'Profile',
-            'url'  => 'admin/settings',
-            'icon' => 'user',
+            'url'  => 'admin/users',
+            'icon' => 'users',
+            'can'  => 'menu',
         ],
         [
             'text' => 'Change Password',
-            'url'  => 'admin/settings',
+            'url'  => 'admin/settings/password',
             'icon' => 'lock',
+            'can'  => 'menu',
         ],
         [
-            'text'    => 'Multilevel',
-            'icon'    => 'share',
-            'submenu' => [
-                [
-                    'text' => 'Level One',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'Level One',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'Level Two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'Level Two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'Level Three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'Level Three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'Level One',
-                    'url'  => '#',
-                ],
-            ],
-        ],
-        'LABELS',
-        [
-            'text'       => 'Important',
-            'icon_color' => 'red',
+            'text' => 'Permissions',
+            'url'  => 'admin/permission',
+            'icon' => 'lock',
+            'can'  => 'menu',
         ],
         [
-            'text'       => 'Warning',
-            'icon_color' => 'yellow',
-        ],
-        [
-            'text'       => 'Information',
-            'icon_color' => 'aqua',
-        ],
+            'text' => 'Roles',
+            'url'  => 'admin/Role',
+            'icon' => 'lock',
+            'can'  => 'menu',
+        ],*/
     ],
 
     /*
